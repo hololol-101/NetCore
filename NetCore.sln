@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32413.511
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCore.Web", "NetCore.Web\NetCore.Web.csproj", "{AB710E87-2A19-41DE-A7BA-CBACE4FB9088}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCore.Web", "NetCore.Web\NetCore.Web.csproj", "{AB710E87-2A19-41DE-A7BA-CBACE4FB9088}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCore.Services", "NetCore.Services\NetCore.Services.csproj", "{307D520B-0E00-4840-AA46-F4B460ABEBB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCore.Data", "NetCore.Data\NetCore.Data.csproj", "{6A7AF752-50EF-42C8-9CE1-B75337918C17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{AB710E87-2A19-41DE-A7BA-CBACE4FB9088}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB710E87-2A19-41DE-A7BA-CBACE4FB9088}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB710E87-2A19-41DE-A7BA-CBACE4FB9088}.Release|Any CPU.Build.0 = Release|Any CPU
+		{307D520B-0E00-4840-AA46-F4B460ABEBB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{307D520B-0E00-4840-AA46-F4B460ABEBB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{307D520B-0E00-4840-AA46-F4B460ABEBB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{307D520B-0E00-4840-AA46-F4B460ABEBB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A7AF752-50EF-42C8-9CE1-B75337918C17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A7AF752-50EF-42C8-9CE1-B75337918C17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A7AF752-50EF-42C8-9CE1-B75337918C17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A7AF752-50EF-42C8-9CE1-B75337918C17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

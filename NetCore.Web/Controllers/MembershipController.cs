@@ -1,4 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using NetCore.Data.ViewModels;
+using NetCore.Services.Interfaces;
+using NetCore.Services.Svcs;
 using NetCore.Web.Models;
 using System;
 using System.Collections.Generic;
@@ -9,6 +12,7 @@ namespace NetCore.Web.Controllers
 {
     public class MembershipController : Controller
     {
+        private IUser _user = new UserServices();
         public IActionResult Index()
         {
             return View();
@@ -23,9 +27,9 @@ namespace NetCore.Web.Controllers
         {
             string message = string.Empty;
             if (ModelState.IsValid) {
-                string userId = "jadejs";
-                string password = "123456";
-                if (login.UserId.Equals(userId) && login.Password.Equals(password))
+
+                //서비스 부분 프로젝트로 관리 -> 재사용, 효율성 올라감
+                if(_user.MatchTheUserInfo(login))
                 {
                     TempData["Message"] = "로그인이 성공적으로 이루어졌습니다.";
 
