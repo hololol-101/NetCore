@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using NetCore.Services.Interfaces;
+using NetCore.Services.Svcs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +25,13 @@ namespace NetCore.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //의존선 주입을 사용하기 위해 서비스로 등록
+            //IUser = 껍데기, UserService = 내용물
+            //IUser 인터페이스에 UserService 클래스 인터페이스 주입
+            services.AddScoped<IUser, UserService>();
+
+
+            //MVC 패턴을 사용하기 위해 서비스로 등록
             services.AddControllersWithViews();
         }
 

@@ -12,7 +12,12 @@ namespace NetCore.Web.Controllers
 {
     public class MembershipController : Controller
     {
-        private IUser _user = new UserServices();
+        //의존성 주입 - .net core에서 기본적으로 제공하는 생성자 주입 방식 사용
+        private IUser _user;
+        public MembershipController(IUser user) {
+            //user 값을 startup class 에서 가져온다
+            _user = user;
+        }
         public IActionResult Index()
         {
             return View();

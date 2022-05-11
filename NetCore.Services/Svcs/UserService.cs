@@ -8,7 +8,7 @@ using System.Text;
 
 namespace NetCore.Services.Svcs
 {
-    public class UserServices : IUser
+    public class UserService : IUser
     {
         #region private methods
 
